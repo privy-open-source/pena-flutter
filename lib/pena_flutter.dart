@@ -52,32 +52,32 @@ class Pena extends StatelessWidget {
 
   Uri getUri() {
     Uri uri = Uri.parse(url);
-    Map<String, String> queryParameters = Map.from(uri.queryParameters);
+    Map<String, String> query = Map.from(uri.queryParameters);
 
     if (lang != null) {
-      queryParameters['lang'] = lang!;
+      query['lang'] = lang!;
     }
 
     if (privyId != null) {
-      queryParameters['privyId'] = privyId!;
+      query['privyId'] = privyId!;
     }
 
     if (visibility != null) {
-      queryParameters['visibility'] = visibility.toString();
+      query['visibility'] = visibility.toString();
     }
 
     if (debug != null) {
-      queryParameters['debug'] = debug.toString();
+      query['debug'] = debug.toString();
     }
 
     if (signature != null) {
-      queryParameters['x'] = signature!.x.toString();
-      queryParameters['y'] = signature!.y.toString();
-      queryParameters['page'] = signature!.page.toString();
-      queryParameters['fixed'] = signature!.fixed.toString();
+      query['x'] = signature!.x.toString();
+      query['y'] = signature!.y.toString();
+      query['page'] = signature!.page.toString();
+      query['fixed'] = signature!.fixed.toString();
     }
 
-    return uri.replace(queryParameters: queryParameters);
+    return uri.replace(queryParameters: query);
   }
 
   void onMessageReceived(JavaScriptMessage event) {
