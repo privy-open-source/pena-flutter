@@ -2,10 +2,29 @@
 
 > Pena plugin for Flutter
 
+## Requirement
+
+| Platform | Requirement |
+|----------|-------------|
+| Android  | SDK 19+     |
+| IOS      | 9.0+        |
+
 ## Installation
 
 ```sh
 flutter pub add pena_flutter
+```
+
+### Android Platform
+
+You should however make sure to set the correct minSdkVersion in `android/app/build.gradle` if it was previously lower than 19:
+
+```gradle
+android {
+    defaultConfig {
+        minSdkVersion 19
+    }
+}
 ```
 
 ## Usage

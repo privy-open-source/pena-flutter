@@ -1,7 +1,8 @@
 name: pena_flutter
-description: A new Flutter package project.
-version: 0.0.1
-homepage:
+description: Pena plugin for Flutter
+version: 0.1.0
+homepage: https://github.com/privy-open-source/pena-flutter#readme
+repository: https://github.com/privy-open-source/pena-flutter
 
 environment:
   sdk: '>=2.19.2 <3.0.0'

@@ -81,10 +81,15 @@ class Pena extends StatelessWidget {
   }
 
   void onMessageReceived(JavaScriptMessage event) {
-    var json = jsonDecode(event.message);
-    var payload = Payload(action: json.action, data: json.data);
+    if (onAfterAction != null) {
+      var json = jsonDecode(event.message);
+      var payload = Payload(
+        action: json['action'],
+        data: json['data'],
+      );
 
-    onAfterAction?.call(payload);
+      onAfterAction?.call(payload);
+    }
   }
 
   @override
