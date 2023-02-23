@@ -6,8 +6,8 @@
 
 | Platform | Requirement |
 |----------|-------------|
-| Android  | SDK 19+     |
-| IOS      | 9.0+        |
+| Android  | SDK 30+     |
+| IOS      | 14+         |
 
 ## Installation
 
@@ -17,12 +17,12 @@ flutter pub add pena_flutter
 
 ### Android Platform
 
-You should however make sure to set the correct minSdkVersion in `android/app/build.gradle` if it was previously lower than 19:
+You should however make sure to set the correct minSdkVersion in `android/app/build.gradle` if it was previously lower than 30:
 
 ```gradle
 android {
     defaultConfig {
-        minSdkVersion 19
+        minSdkVersion 30
     }
 }
 ```
@@ -34,7 +34,7 @@ import 'package:pena_flutter/pena_flutter.dart';
 
 class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildCofunctionfunctionntext context) {
+  Widget build(BuildContext context) {
     return Pena(
       url: 'http://sign.document.com/doc/xxxxx',
       lang: 'en',
