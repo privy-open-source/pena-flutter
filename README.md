@@ -1,6 +1,6 @@
 # Pena 💙 Flutter
 
-> Pena plugin for Flutter
+> PrivyID's Official Client Integration Library for Flutter.
 
 ## Requirement
 
