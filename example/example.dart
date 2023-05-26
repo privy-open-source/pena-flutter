@@ -10,6 +10,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Pena(url: 'https://www.youtube.com/embed/VbfpW0pbvaU');
+    return Pena(
+      url: 'http://sign.document.com/doc/xxxxx',
+      lang: 'en',
+      signature: const Placement(x: 50, y: 100, page: 1),
+      onAfterAction: (payload) {
+        if (payload.action == 'sign') {
+          print(payload.data);
+        }
+      },
+    );
   }
 }

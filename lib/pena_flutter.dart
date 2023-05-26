@@ -56,6 +56,9 @@ class Pena extends StatelessWidget {
   /// Enable debug mode
   final bool? debug;
 
+  // Force user to scroll to
+  final dynamic needScrollTo;
+
   /// After action hook
   final HookFn? onAfterAction;
 
@@ -67,6 +70,7 @@ class Pena extends StatelessWidget {
     this.privyId,
     this.debug,
     this.onAfterAction,
+    this.needScrollTo,
     @Deprecated('use API to set placement when upload the document')
         this.signature,
   });
@@ -97,6 +101,10 @@ class Pena extends StatelessWidget {
       query['y'] = signature!.y.toString();
       query['page'] = signature!.page.toString();
       query['fixed'] = signature!.fixed.toString();
+    }
+
+    if (needScrollTo != null) {
+      query['need_scrollto'] = needScrollTo.toString();
     }
 
     return uri.replace(queryParameters: query);

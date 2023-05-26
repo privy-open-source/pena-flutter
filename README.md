@@ -33,6 +33,8 @@ android {
 import 'package:pena_flutter/pena_flutter.dart';
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Pena(
@@ -53,19 +55,20 @@ class MyApp extends StatelessWidget {
 
 ### Props
 
-| Name            | Type      | Default | Description                                                                                                  |
-|-----------------|-----------|:-------:|--------------------------------------------------------------------------------------------------------------|
-| `url`           | String    |    -    | **(Required)** Document's url                                                                                |
-| `lang`          | String    |  `en`   | Set language, valid value is `en` or `id`                                                                    |
-| `visibility`    | bool      | `true`  | Set signature visibility                                                                                     |
-| `privyId`       | String    |    -    | Set recipient's privyId                                                                                      |
-| `signature`     | Placement |    -    | Set signature placement<br/> <strong>(Deprecated)</strong> use API to set placement when upload the document |
-| ├ `x`           | num       |    -    | X Coordinate                                                                                                 |
-| ├ `y`           | num       |    -    | Y Coordinate                                                                                                 |
-| ├ `page`        | num       |    -    | Target page                                                                                                  |
-| └ `fixed`       | bool      | `false` | Disabled signature for moving                                                                                |
-| `debug`         | bool      | `false` | Enable debug mode                                                                                            |
-| `onAfterAction` | Function  |    -    | After action hook                                                                                            |
+| Name            | Type          | Default | Description                                                                                                                                  |
+|-----------------|---------------|:-------:|----------------------------------------------------------------------------------------------------------------------------------------------|
+| `url`           | String        |    -    | **(Required)** Document's url                                                                                                                |
+| `lang`          | String        |  `en`   | Set language, valid value is `en` or `id`                                                                                                    |
+| `visibility`    | bool          | `true`  | Set signature visibility                                                                                                                     |
+| `privyId`       | String        |    -    | Set recipient's privyId                                                                                                                      |
+| `signature`     | Placement     |    -    | Set signature placement<br/> <strong>(Deprecated)</strong> use API to set placement when upload the document                                 |
+| ├ `x`           | num           |    -    | X Coordinate                                                                                                                                 |
+| ├ `y`           | num           |    -    | Y Coordinate                                                                                                                                 |
+| ├ `page`        | num           |    -    | Target page                                                                                                                                  |
+| └ `fixed`       | bool          | `false` | Disabled signature for moving                                                                                                                |
+| `debug`         | bool          | `false` | Enable debug mode                                                                                                                            |
+| `needScrollTo`  | num \| String |    -    | Force user to scroll to target page before doing an action (sign,review,etc). Valid value is a number, or set `last` to target the last page |
+| `onAfterAction` | Function      |    -    | After action hook                                                                                                                            |
 
 ## License
 
