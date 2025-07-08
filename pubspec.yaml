@@ -5,7 +5,7 @@ homepage: https://github.com/privy-open-source/pena-flutter#readme
 repository: https://github.com/privy-open-source/pena-flutter
 
 environment:
-  sdk: '>=2.19.2 <3.0.0'
+  sdk: '<4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
